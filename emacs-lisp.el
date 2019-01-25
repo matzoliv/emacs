@@ -12,7 +12,8 @@
   (interactive)
   (helm
    :sources (helm-build-in-buffer-source "All functions"
-              :action (helm-make-actions "Insert" #'describe-function)
+              :action (helm-make-actions "Insert" (lambda (fn-name)
+                                                    (describe-function (intern fn-name))))
               :init (lambda ()
                       (with-current-buffer (helm-candidate-buffer 'global)
                         (mapatoms
@@ -22,3 +23,4 @@
    :buffer "*helm all functions*"))
 
 (global-set-key (kbd "C-c f h") 'helm-list-functions)
+

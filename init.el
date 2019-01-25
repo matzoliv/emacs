@@ -15,6 +15,8 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+(global-set-key (kbd "C-c M") 'man)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; General UI settings
