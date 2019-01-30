@@ -30,8 +30,9 @@
 
 (defun mu4e-configure-line-wrap ()
   (turn-on-auto-fill)
-  (set-fill-column 80))
+  (set-fill-column 80)
+  (setq-default truncate-lines nil))
 
-(add-hook 'mu4e-compose-mode #'mu4e-configure-line-wrap)
-(add-hook 'mu4e-view-mode  #'mu4e-configure-line-wrap)
+(add-hook 'mu4e-compose-mode-hook #'mu4e-configure-line-wrap)
+(add-hook 'mu4e-view-mode-hook  #'mu4e-configure-line-wrap)
  
