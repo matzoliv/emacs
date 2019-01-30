@@ -24,6 +24,7 @@
 (global-linum-mode)
 (size-indication-mode t)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 (setq inhibit-startup-screen t)
 (setq-default cursor-type 'bar)
 (show-paren-mode 1)
